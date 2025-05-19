@@ -4,7 +4,7 @@ A simple and interactive Bash script to upload a **File or Folder** to a local `
 
 ---
 
-## 🛠 Features
+## 🛠 Features of this project
 
 - Accepts any file or folder as input
 - Automatically compresses directories
