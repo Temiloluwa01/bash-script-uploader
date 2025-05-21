@@ -11,14 +11,14 @@ mkdir -p "$UPLOADS"
 touch "$LOG_FILE" 
 
 
-# # Check if a directory name is provided
-# if [ -z "$INPUT" ]; then
-#   echo "❌ Error: Please provide the name of the file or folder to upload."
-#   echo " How to Use: ./project1.sh <input_name>"
-#   exit 1
-# else
-#   echo "✅ input provided: $INPUT, checking what type of input you uploaded."
-# fi
+# Check if a directory name is provided
+if [ -z "$INPUT" ]; then
+  echo "❌ Error: Please provide the name of the file or folder to upload."
+  echo " How to Use: ./project1.sh <input_name>"
+  exit 1
+else
+  echo "✅ input provided: $INPUT, checking what type of input you uploaded."
+fi
 
 # Check if the input is a directory and if it exists
 if [ -d "$INPUT" ]; then
@@ -43,10 +43,11 @@ else
 fi
 
 # else
-#   echo "❌ Error: '$INPUT' is neither a file nor a folder."
-#   exit 1
-# fi
-# Logging the action
+echo "❌ Error: '$INPUT' is neither a file nor a folder."
+exit 1
+fi
+
+Logging the action
 echo " $TYPE $INPUT uploaded as $ARCHIVE_NAME on $(date)" >> "$LOG_FILE"
 
 # Done
