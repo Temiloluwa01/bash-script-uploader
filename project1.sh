@@ -1,24 +1,24 @@
 #!/bin/bash
 
-INPUT="$1"
-TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
-ARCHIVE_NAME="${INPUT}_${TIMESTAMP}.tar.gz"  ##
-UPLOADS="uploads"  # Directory to store the uploads
-LOG_FILE="log.txt"
+# INPUT="$1"
+# TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
+# ARCHIVE_NAME="${INPUT}_${TIMESTAMP}.tar.gz"  ##
+# UPLOADS="uploads"  # Directory to store the uploads
+# LOG_FILE="log.txt"
 
-# Create uploads folder and log fie for the upload 
-mkdir -p "$UPLOADS"
-touch "$LOG_FILE" 
+# # Create uploads folder and log fie for the upload 
+# mkdir -p "$UPLOADS"
+# touch "$LOG_FILE" 
 
 
-# Check if a directory name is provided
-if [ -z "$INPUT" ]; then
-  echo "❌ Error: Please provide the name of the file or folder to upload."
-  echo " How to Use: ./project1.sh <input_name>"
-  exit 1
-else
-  echo "✅ input provided: $INPUT, checking what type of input you uploaded."
-fi
+# # Check if a directory name is provided
+# if [ -z "$INPUT" ]; then
+#   echo "❌ Error: Please provide the name of the file or folder to upload."
+#   echo " How to Use: ./project1.sh <input_name>"
+#   exit 1
+# else
+#   echo "✅ input provided: $INPUT, checking what type of input you uploaded."
+# fi
 
 # Check if the input is a directory and if it exists
 if [ -d "$INPUT" ]; then
