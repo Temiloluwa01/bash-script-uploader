@@ -3,12 +3,12 @@
 INPUT="$1"
 TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
 ARCHIVE_NAME="${INPUT}_${TIMESTAMP}.tar.gz"  ##
-UPLOADS="uploads"
+UPLOADS="downloads"
 LOG_FILE="log.txt"
 
 # Create uploads folder and log fie for the upload 
 mkdir -p "$UPLOADS"
-touch "$LOG_FILE"
+touch "$LOG_FILE" 
 
 
 # Check if a directory name is provided
